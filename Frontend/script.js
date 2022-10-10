@@ -1,6 +1,7 @@
 function hideLoader() {
     document.getElementById('loading').style.display = 'none';
 }
+
 const api_url = "http://localhost:8080/shows"
 
 async function getApi() {
@@ -8,7 +9,7 @@ async function getApi() {
     let data = await response.json();
     if (response) {
         hideLoader();
-        show(data);
+        showShows(data);
     }
 
 }
@@ -17,18 +18,21 @@ getApi(api_url)
     .catch((error) => console.error("FETCH ERROR:", error));
 
 
+function showShows(data) {
 
-function show(data) {
-    const nameText = document.getElementsByClassName("nameText")[0];
-    console.log(nameText);
-    data.forEach((dataS) => {
 
-        let itemP = document.createElement("H1");
-        let itemPText = document.createTextNode(dataS.name);
-        itemP.appendChild(itemPText);
-        nameText.appendChild(itemP);
-        console.log(itemP);
-        console.log(dataS.name)
+    let list = document.getElementById("myList");
+    console.log(list);
+    data.forEach((item) => {
+        for (const entry of Object.entries(item)) {
+            let li = document.createElement("li");
+            li.innerText = (`${entry[0]} : ${entry[1]}\n \n`).
+            list.appendChild(li);
+
+        }
     })
 
 }
+
+
+
