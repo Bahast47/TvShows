@@ -1,0 +1,42 @@
+body {
+    position: relative;
+    background-color: #0b0b36;
+}
+
+#title {
+    position: relative;
+    text-align: center;
+    color: #e9ebff;
+    font-size: 65px;
+}
+
+#container {
+    box-shadow: 10px 20px black, inset;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+    margin-outside: 100px;
+    padding: 15px;
+    background-color: #141460;
+    position: absolute;
+    border: 10px solid #d2d0d0;
+    left: 10%;
+    width: 80%;
+    height: fit-content;
+    height: 750px;
+    align-content: center;
+    shadow-radius: 50px;
+}
+
+#myList {
+    position: relative;
+    color: #dadada;
+    font-size: 20px;
+}
+
+#loading {
+    position: relative;
+    color: whitesmoke;
+    font-size: 20px;
+}
+

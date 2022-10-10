@@ -5,18 +5,27 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shows</title>
-
 </head>
 <body>
-<h1>Shows</h1>
-
-<div class="spinner-border"
-     role="status" id="loading">
-    <span class="sr-only">Loading...</span>
+<div id="container">
+    <h1 id="title">SHOWS</h1>
+    <button type="button" id="button1" onclick="showShows();">Top Episodes</button>
+    <ul id="myList">
+    </ul>
+    <div class="spinner-border"
+         role="status" id="loading">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Show</th>
+                <th>Network</th>
+                <th>Genres</th>
+                <th>Summary</th>
+            </tr>
+        </table>
+        <span class="sr-only">Loading...</span>
     </div>
-
-<ul id="myList"></ul>
+</div>
 <script src="script.js"></script>
 </body>
-
 </html>
